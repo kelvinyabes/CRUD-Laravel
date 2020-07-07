@@ -14,8 +14,7 @@ class CreateJawabanTable extends Migration
     public function up()
     {
         Schema::create('jawaban', function (Blueprint $table) {
-            $table->unsignedBigInteger('jawaban_id');
-            $table->foreign('jawaban_id')->references('pertanyaan_id')->on('pertanyaan');
+            $table->bigIncrements('jawaban_id');
             $table->string('name');
             $table->string('jawaban');
             $table->string('tgl_dibuat')->nullable();

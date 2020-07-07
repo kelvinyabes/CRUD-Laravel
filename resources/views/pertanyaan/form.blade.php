@@ -19,7 +19,8 @@
                 <input type="text" class="form-control" id="pertanyaan" name="pertanyaan" placeholder="Enter Pertanyaan">
             </div>
         </div>
-     
+        <input hidden name="tgl_dibuat" value="{{ Carbon\Carbon::now() }} ">
+        <input hidden name="tgl_diperbarui" value="{{ Carbon\Carbon::now() }} ">
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
